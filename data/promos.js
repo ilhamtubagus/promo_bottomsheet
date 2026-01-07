@@ -4,7 +4,7 @@ export const PROMOS = [
 - Minimum pembelian Rp299.000
 - Berlaku untuk semua produk
 - Limit penggunaan voucher 1x/user
-`
+`, promoCode: 'LAWEEKEND100'
 },
   { promoId: '2', title: 'Mom\'s Weekend Treat 50K', expiry: '31 Januari 2026' },
   { promoId: '3', title: 'Mom\'s Weekend Treat 100K', expiry: '11 Januari 2026' },

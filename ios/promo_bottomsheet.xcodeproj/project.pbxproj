@@ -15,6 +15,7 @@
 		6C3687F15ED14A39A8EAAAA5 /* Figtree-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA85101A7146179CEF8006 /* Figtree-Bold.ttf */; };
 		DE05F324ECAF4365B8DAF620 /* Figtree-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D1A3D4FA52D45A9A42EA315 /* Figtree-Medium.ttf */; };
 		A90673601C4E473CA750AC29 /* Figtree-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3134D704FF2F47DC98C41A54 /* Figtree-Regular.ttf */; };
+		FCC73DCBD15646D3B52AAC51 /* Figtree-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3830A59DA2043FDB000AF6C /* Figtree-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9CBA85101A7146179CEF8006 /* Figtree-Bold.ttf */ = {isa = PBXFileReference; name = "Figtree-Bold.ttf"; path = "../assets/fonts/Figtree-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		6D1A3D4FA52D45A9A42EA315 /* Figtree-Medium.ttf */ = {isa = PBXFileReference; name = "Figtree-Medium.ttf"; path = "../assets/fonts/Figtree-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		3134D704FF2F47DC98C41A54 /* Figtree-Regular.ttf */ = {isa = PBXFileReference; name = "Figtree-Regular.ttf"; path = "../assets/fonts/Figtree-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C3830A59DA2043FDB000AF6C /* Figtree-Black.ttf */ = {isa = PBXFileReference; name = "Figtree-Black.ttf"; path = "../assets/fonts/Figtree-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				9CBA85101A7146179CEF8006 /* Figtree-Bold.ttf */,
 				6D1A3D4FA52D45A9A42EA315 /* Figtree-Medium.ttf */,
 				3134D704FF2F47DC98C41A54 /* Figtree-Regular.ttf */,
+				C3830A59DA2043FDB000AF6C /* Figtree-Black.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				6C3687F15ED14A39A8EAAAA5 /* Figtree-Bold.ttf in Resources */,
 				DE05F324ECAF4365B8DAF620 /* Figtree-Medium.ttf in Resources */,
 				A90673601C4E473CA750AC29 /* Figtree-Regular.ttf in Resources */,
+				FCC73DCBD15646D3B52AAC51 /* Figtree-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

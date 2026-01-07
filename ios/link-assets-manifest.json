@@ -12,6 +12,10 @@
     {
       "path": "assets/fonts/Figtree-Regular.ttf",
       "sha1": "b971ba6c123ca42604ae74840afd8e1ade6926ea"
+    },
+    {
+      "path": "assets/fonts/Figtree-Black.ttf",
+      "sha1": "2336c6dd3185a86b37c298a18408fe91785028fb"
     }
   ]
 }
