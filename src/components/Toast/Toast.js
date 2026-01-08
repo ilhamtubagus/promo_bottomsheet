@@ -30,7 +30,7 @@ export default function Toast({ visible, message }) {
         { transform: [{ translateY }] },
       ]}
     >
-      <Image source={require('../../assets/icons/check-circle.png')} style={styles.icon}/>
+      <Image source={require('../../../assets/icons/check-circle.png')} style={styles.icon}/>
       <Text style={styles.text}>{message}</Text>
     </Animated.View>
   );
