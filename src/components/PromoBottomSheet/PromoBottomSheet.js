@@ -2,12 +2,12 @@ import BottomSheet, {
   BottomSheetBackdrop,
   BottomSheetFlatList,
 } from '@gorhom/bottom-sheet';
-import { useMemo, useRef } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { useCallback, useMemo, useRef } from 'react';
+import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native';
 
-import { PROMOS } from '../../data/promos';
 import PromoCard from '../PromoCard';
 import styles from './PromoBottomSheet.styles';
+import { usePromos } from '../../hooks/usePromos';
 
 const renderBackdrop = (props) => (
   <BottomSheetBackdrop
@@ -18,10 +18,15 @@ const renderBackdrop = (props) => (
   />
 );
 
-
 export default function PromoBottomSheet({ onClose, onCopy }) {
   const sheetRef = useRef(null);
   const snapPoints = useMemo(() => ['70%'], []);
+  const { promos, isLoading, fetchMore, hasMore } = usePromos(); // Added hasMore
+
+  const renderItem = useCallback(({ item }) => (
+    <PromoCard promo={item} onCopy={onCopy} />
+  ), [onCopy]);
+  const keyExtractor = useCallback((item) => item.promoCode, []);
 
   return (
     <BottomSheet
@@ -32,6 +37,7 @@ export default function PromoBottomSheet({ onClose, onCopy }) {
       onClose={onClose}
       enableDynamicSizing={false}
       backdropComponent={renderBackdrop}
+      style={styles.btsContainer}
     >
       <View style={styles.header}>
         <Text style={styles.title}>Special Promo</Text>
@@ -41,10 +47,12 @@ export default function PromoBottomSheet({ onClose, onCopy }) {
       </View>
 
       <BottomSheetFlatList
-        data={PROMOS}
-        keyExtractor={(item) => item.promoId}
-        renderItem={({ item }) => <PromoCard promo={item} onCopy={onCopy} />}
-        contentContainerStyle={styles.list}
+        data={promos}
+        keyExtractor={keyExtractor}
+        onEndReached={fetchMore}
+        onEndReachedThreshold={0.5} // Lower threshold
+        ListFooterComponent={isLoading ? <ActivityIndicator /> : null}
+        renderItem={renderItem}
       />
     </BottomSheet>
   );

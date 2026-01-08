@@ -14,7 +14,6 @@ export default  function PromoDetailScreen(){
     setTimeout(() => setToastVisible(false), 2000);
   };
 
-
   return (
     <View style={styles.container}>
       <Toast
