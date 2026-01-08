@@ -3,9 +3,11 @@ import BottomSheet, {
   BottomSheetFlatList,
 } from '@gorhom/bottom-sheet';
 import { useMemo, useRef } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import PromoCard from './PromoCard';
-import { PROMOS } from '../data/promos';
+import { View, Text, TouchableOpacity } from 'react-native';
+
+import { PROMOS } from '../../data/promos';
+import PromoCard from '../PromoCard';
+import styles from './PromoBottomSheet.styles';
 
 const renderBackdrop = (props) => (
   <BottomSheetBackdrop
@@ -47,10 +49,3 @@ export default function PromoBottomSheet({ onClose, onCopy }) {
     </BottomSheet>
   );
 }
-
-const styles = StyleSheet.create({
-  header: { flexDirection: 'row', justifyContent: 'space-between', padding: 16 },
-  title: { fontSize: 18, fontWeight: '600' , color: '#25172E'},
-  close: { fontSize: 18, color: '#404040' },
-  list: { paddingHorizontal: 16, paddingBottom: 24 },
-});
