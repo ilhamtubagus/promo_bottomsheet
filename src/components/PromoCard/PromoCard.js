@@ -4,6 +4,7 @@ import { PROMO_ICONS } from '../../constants/promoIcons';
 import Markdown from 'react-native-markdown-display';
 import Clipboard from '@react-native-clipboard/clipboard';
 import styles from './PromoCard.styles';
+import { ISODateToHuman } from '../../utils/date';
 
 
 export default function PromoCard({ promo, onCopy }) {
@@ -37,7 +38,7 @@ export default function PromoCard({ promo, onCopy }) {
           <Text style={styles.title} ellipsizeMode="tail" numberOfLines={1}>{promo.title}</Text>
           <View style={styles.subtitleContainer}>
             <Text style={styles.subtitle}>
-              Berlaku sampai {promo.expiry}
+              Berlaku sampai {ISODateToHuman(promo.expiryDate)}
             </Text>
             <Text style={styles.more}>{expanded ? 'See Less' : 'See More'}</Text>
           </View>
